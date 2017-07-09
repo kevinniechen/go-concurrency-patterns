@@ -1,6 +1,9 @@
 //	Kevin Chen (2017)
 //	Patterns from Pike's Google I/O talk, "Go Concurrency Patterns"
 
+//  In non deterministic select control block, 1 second timer (created each iteration) may
+//  time out if channel does not return a string in a second
+
 package main
 
 import (
@@ -14,7 +17,7 @@ func main() {
 		select {
 		case s := <-ch:
 			fmt.Println(s)
-		case <-time.After(1*time.Second): // time.After returns a channel that waits N time to send a message
+		case <-time.After(1 * time.Second): // time.After returns a channel that waits N time to send a message
 			fmt.Println("Waited too long!")
 			return
 		}

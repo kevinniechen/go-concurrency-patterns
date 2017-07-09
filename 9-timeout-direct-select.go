@@ -1,6 +1,8 @@
 //	Kevin Chen (2017)
 //	Patterns from Pike's Google I/O talk, "Go Concurrency Patterns"
 
+//  Global timer returns after 5 seconds, stopping execution in select control block
+
 package main
 
 import (
