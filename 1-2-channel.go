@@ -20,7 +20,7 @@ func main() {
 	fmt.Println("Done!")
 }
 
-func channel_print(msg string, ch chan string) {
+func channel_print(msg string, ch chan<- string) {
 	for i := 0; ; i++ {
 		ch <- fmt.Sprintf("%s %d", msg, i)
 		time.Sleep(time.Second)
