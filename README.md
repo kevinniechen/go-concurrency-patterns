@@ -1,5 +1,6 @@
 # Golang Concurrency Patterns
 Common and useful golang concurrency patterns I implemented from Rob Pike's famous 2012 Google I/O talk.
+
 [Google I/O Talk](https://www.youtube.com/watch?v=f6kdp27TYZs&t=1021s)
 
 ### Patterns
